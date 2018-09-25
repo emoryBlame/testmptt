@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block main %}
+	<h1>{{group.name}}</h1>
+	<h2>Description:{{group.description}}</h2>
+	<h2>Icon: <img src="{{group.icon.url}}" alt=""/></h2>
+	<br/>
+	<br/>
+	<h2>Child Groups({{group.inheritGroup}}):</h2>
+	{% for group in cG %}
+		<h3><a href="/group={{elem}}/">{{group}}</a></h3>
+	{% endfor %}	
+	<br/>
+	<br/>
+	<h2>Child Elements({{group.inheritElement}}):</h2>
+	{% for elem in cE %}
+		<h3>{{elem}}</h3>
+	{% endfor %}
+	<h3><a href="/addElem/">Добавить новый элемент</a></h3>
+	<br/>
+	<br/>
+	<h1><a href="/">Home</a></h1>
+{% endblock %}

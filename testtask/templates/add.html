@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block main %}
+	<h1>{{text}}</h1>
+	<form action="/addElem/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+		{{form.as_p}}
+		<button>OKEY</button>
+	</form>
+	<h1><a href="/">Home</a></h1>
+{% endblock %}

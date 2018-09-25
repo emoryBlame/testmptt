@@ -1,0 +1,7 @@
+Django==2.1.1
+django-js-asset==1.1.0
+django-mptt==0.9.1
+docutils==0.14
+Pillow==5.2.0
+pytz==2018.5
+suit==2.0.2
